@@ -14,9 +14,26 @@ describe('AppController', () => {
     appController = app.get<AppController>(AppController);
   });
 
-  describe('root', () => {
+  describe('Healthy check api', () => {
     it('should return "Hello World!"', () => {
       expect(appController.getHello()).toBe('Hello World!');
+    });
+  });
+  describe('Fetch information of me', () => {
+    it('should return "Object"', () => {
+      expect(appController.getMe()).toMatchObject({
+        name: 'Dai Nguyen Update',
+        phone: '0375629888',
+        age: 24,
+        city: 'HCMC',
+      });
+    });
+  });
+  describe('Fetch coporate name where I working', () => {
+    it('should return "Object"', () => {
+      expect(appController.getCoporate()).toMatchObject({
+        name: 'Bnk Solution',
+      });
     });
   });
 });

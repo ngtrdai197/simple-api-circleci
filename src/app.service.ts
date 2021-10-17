@@ -17,7 +17,7 @@ export class AppService {
 
   public getCoporate() {
     return {
-      name: "Bnk Solution"
-    }
+      name: 'Bnk Solution',
+    };
   }
 }
