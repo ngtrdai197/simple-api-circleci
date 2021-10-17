@@ -5,4 +5,13 @@ export class AppService {
   getHello(): string {
     return 'Hello World!';
   }
+
+  public getMe() {
+    return {
+      name: 'Dai Nguyen',
+      phone: '0375629888',
+      age: 24,
+      city: 'HCMC',
+    };
+  }
 }

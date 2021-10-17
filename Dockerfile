@@ -21,6 +21,8 @@ COPY package*.json ./
 
 RUN npm install --only=production
 
+EXPOSE 3333
+
 COPY --from=development /usr/src/app/dist ./dist
 
 CMD ["npm", "run", "start:prod"]
