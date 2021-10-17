@@ -8,7 +8,7 @@ export class AppService {
 
   public getMe() {
     return {
-      name: 'Dai Nguyen',
+      name: 'Dai Nguyen Update',
       phone: '0375629888',
       age: 24,
       city: 'HCMC',
