@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd `simple-api/`
+cd simple-api
 
 docker-compose stop
 docker-compose rm -f

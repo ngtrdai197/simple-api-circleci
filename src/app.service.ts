@@ -14,4 +14,10 @@ export class AppService {
       city: 'HCMC',
     };
   }
+
+  public getCoporate() {
+    return {
+      name: "Bnk Solution"
+    }
+  }
 }

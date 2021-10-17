@@ -14,4 +14,9 @@ export class AppController {
   getMe() {
     return this.appService.getMe();
   }
+
+  @Get('coporate')
+  getCoporate() {
+    return this.appService.getCoporate();
+  }
 }
