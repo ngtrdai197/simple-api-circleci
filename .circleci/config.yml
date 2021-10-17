@@ -6,9 +6,15 @@ orbs:
 
 jobs:
   testing:
-    executor: docker/docker
+    docker:
+      - image: circleci/node
     steps:
+      - checkout
       - run:
+          name: "Install npm dependencies"
+          command: npm install --save    
+      - run:
+          name: Run testing by jest for api
           command: npm run test
   build-and-push:
     environment:
