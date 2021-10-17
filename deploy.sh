@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd `dirname $BASH_SOURCE`
+cd `simple-api/`
 
 docker-compose stop
 docker-compose rm -f
