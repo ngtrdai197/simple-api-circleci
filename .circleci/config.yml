@@ -5,6 +5,11 @@ orbs:
   docker: circleci/docker@1.4.0
 
 jobs:
+  testing:
+    executor: docker/docker
+    steps:
+      - run:
+          command: npm run test
   build-and-push:
     environment:
       DOCKER_IMAGE: ngtrdai197/simple-app-api
@@ -37,10 +42,10 @@ jobs:
 workflows:
   my-pipeline:
     jobs:
-      - node/test
+      - testing
       - build-and-push:
           requires:
-            - node/test
+            - testing
           filters:
             branches:
               only:
