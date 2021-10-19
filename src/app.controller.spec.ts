@@ -30,11 +30,4 @@ describe('AppController', () => {
       });
     });
   });
-  describe('Fetch coporate name where I working', () => {
-    it('should return "Object"', () => {
-      expect(appController.getCoporate()).toMatchObject({
-        name: 'Bnk Solution',
-      });
-    });
-  });
 });

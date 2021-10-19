@@ -15,10 +15,4 @@ export class AppService {
       gender: "Male"
     };
   }
-
-  public getCoporate() {
-    return {
-      name: 'Bnk Solution',
-    };
-  }
 }
