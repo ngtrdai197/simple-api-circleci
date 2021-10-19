@@ -12,13 +12,13 @@ jobs:
       - checkout
       - run:
           name: "Install npm dependencies"
-          command: npm install --save    
+          command: npm install --save
       - run:
           name: Run testing by jest for api
           command: npm run test
   build-and-push:
     environment:
-      DOCKER_IMAGE: ngtrdai197/simple-app-api
+      DOCKER_IMAGE: ngtrdai197/simple-api-circleci
       DOCKER_TAG: latest
     executor: docker/docker
     steps:
@@ -43,7 +43,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - $SSH_KEY_FINGERPRINT
-      - run: ssh -oStrictHostKeyChecking=no $DEPLOYED_USER@$DEPLOYED_SERVER './simple-api-deploy.sh'
+      - run: ssh -oStrictHostKeyChecking=no $DEPLOYED_USER@$DEPLOYED_SERVER './simple-api-circle-ci-deployment.sh'
 
 workflows:
   my-pipeline:
