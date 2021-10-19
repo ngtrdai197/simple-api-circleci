@@ -26,6 +26,7 @@ describe('AppController', () => {
         phone: '0375629888',
         age: 24,
         city: 'HCMC',
+        gender: "Male"
       });
     });
   });
